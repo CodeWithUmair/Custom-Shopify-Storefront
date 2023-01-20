@@ -24,9 +24,6 @@ export default function Layout({ children }) {
         }}
       />
       <header className="container header-inner">
-        <Link to="/" className="header-logo">
-          {shop.name}
-        </Link>
         <ul className="header-navigation">
           <li>
             <a href="#">Link 1</a>
@@ -38,6 +35,9 @@ export default function Layout({ children }) {
             <a href="#">Link 3</a>
           </li>
         </ul>
+        <Link to="/" className="header-logo">
+          {shop.name}
+        </Link>
         <div className="header-cart-link"></div>
       </header>
       <main>

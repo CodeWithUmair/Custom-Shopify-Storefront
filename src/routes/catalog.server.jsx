@@ -24,11 +24,9 @@ export default function Catalog() {
         <Suspense>
           <div className="catalog-page container">
             <div className="product-grid">
-              <ul>
-                {nodes.map((product) => (
-                  <ProductCard product={product} />
-                ))}
-              </ul>
+              {nodes.map((product) => (
+                <ProductCard product={product} />
+              ))}
             </div>
           </div>
         </Suspense>
@@ -43,6 +41,24 @@ const QUERY = gql`
       nodes {
         title
         handle
+        featuredImage {
+          url
+          altText
+          height
+          width
+        }
+        variants(first: 1) {
+          nodes {
+            priceV2 {
+              amount
+              currencyCode
+            }
+            compareAtPriceV2 {
+              amount
+              currencyCode
+            }
+          }
+        }
       }
     }
   }
