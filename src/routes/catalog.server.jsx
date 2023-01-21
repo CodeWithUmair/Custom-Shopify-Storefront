@@ -1,5 +1,6 @@
-import { useShopQuery, CacheLong, gql } from "@shopify/hydrogen";
 import { Suspense } from "react";
+import { useShopQuery, CacheLong, gql } from "@shopify/hydrogen";
+
 import Layout from "../components/Layout.server";
 import ProductCard from "../components/ProductGridItem.server";
 
@@ -16,7 +17,7 @@ export default function Catalog() {
     },
   } = data;
 
-  console.log(nodes);
+  // console.log(nodes);
 
   return (
     <>

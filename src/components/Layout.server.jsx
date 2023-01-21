@@ -1,5 +1,5 @@
-import { useShopQuery, CacheLong, gql, Seo, Link } from "@shopify/hydrogen";
 import { Suspense } from "react";
+import { useShopQuery, CacheLong, gql, Seo, Link } from "@shopify/hydrogen";
 
 export default function Layout({ children }) {
   const data = useShopQuery({
@@ -12,7 +12,7 @@ export default function Layout({ children }) {
     data: { shop },
   } = data;
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
@@ -26,14 +26,14 @@ export default function Layout({ children }) {
       <header className="container header-inner">
         <ul className="header-navigation">
           <li>
-            <a href="#">Link 1</a>
+            <a href="/catalog">Catalog</a>
           </li>
           <li>
-            <a href="#">Link 2</a>
+            <a href="/collections/freestyle">Free Style</a>
           </li>
-          <li>
-            <a href="#">Link 3</a>
-          </li>
+          {/* <li>
+            <a href="/collections/winter-2022">winter-2022</a>
+          </li> */}
         </ul>
         <Link to="/" className="header-logo">
           {shop.name}
