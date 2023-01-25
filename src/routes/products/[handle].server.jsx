@@ -42,7 +42,7 @@ const QUERY = gql`
     product(handle: $handle) {
       title
       description
-      media(first: 1) {
+      media(first: 10) {
         nodes {
           ... on MediaImage {
             id

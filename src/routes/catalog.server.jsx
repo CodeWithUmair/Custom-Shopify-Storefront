@@ -38,7 +38,7 @@ export default function Catalog() {
 
 const QUERY = gql`
   query products {
-    products(first: 9) {
+    products(first: 100) {
       nodes {
         title
         handle
